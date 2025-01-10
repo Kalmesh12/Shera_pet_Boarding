@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("R5O37gKzbpf2HnXKP");  // Replace with your EmailJS Public Key
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            padding: 15px 10%;
+            display: flex;
+            justify-content: flex-end;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: rgb(12, 12, 12);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: rgba(14, 14, 14, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #3cdfe1;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3cdfe1, #e99b13);
+            color: white;
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 10%;
+            background: #f9f9f9;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 10%;
+            background: #fff;
+        }
+
+        .service-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-card:hover {
+    background-color: #f0f0f0;
+}
+
+.service-details {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+        .button {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e44c38;
+            transform: scale(1.1);
+        }
+
+        form {
+            background: #f1f1f1;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        form input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #3cdfe1;
+            color: white;
+            font-size: 1.1em;
+            padding: 15px 0;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #2a3b6c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #010102;
+            color: white;
+        }
+        .dog-container {
+            position: absolute;
+            bottom: 10%;
+            animation: runAcross 6s linear infinite;
+        }
+
+        .dog {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Keyframes to Move the Dog */
+        @keyframes runAcross {
+            0% {
+                left: -200px;
+            }
+            100% {
+                left: 110%;
+            }
+        }
+          /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav {
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+        }
+        @media (max-width: 768px) {
+            .video-section h2 {
+                font-size: 2.5em;
+            }
+            .video-description {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-section h2 {
+                font-size: 2em;
+            }
+        }  
+        .round-image {
+    width: 4%;  /* Set the width of the image */
+    height: 4%;  /* Set the height of the image (same as width to maintain a square) */
+    border-radius: 50%;  /* Make the image round */
+    object-fit: cover;  /* Ensures the image covers the area without distorting */
+}
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="Pet Care Insights.html">Pet Care Insights</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Our Services</h1>
+    </header>
+
+    <section class="hero">
+        <h2 style="color: #2a3b6c;">What We Offer</h2>
+        <p>Explore our wide range of services designed to keep your pets happy and healthy.</p>
+    </section>
+
+    <section class="services">
+        <div class="service-card" onclick="toggleDetails('pet-boarding')">
+            <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 20px; color: #e44c38;">🐾 Pet Boarding</h3>
+            <p>Comfortable and safe boarding for your pets while you're away.</p>
+            <div id="pet-boarding" class="service-details" style="display:none;">
+                <p>We offer a comfortable, stress-free environment where your pets will be well cared for, with regular check-ins, playtime, and personalized attention.</p>
+            </div>
+        </div>
+        <div class="service-card" onclick="toggleDetails('pick-up-drop-off')">
+            <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 20px; color: #e44c38;">🚗 Pick-Up & Drop-Off</h3>
+            <p>Convenient transportation for your pets to and from the facility.</p>
+            <div id="pick-up-drop-off" class="service-details" style="display:none;">
+                <p>We provide safe and reliable transportation for your pets, ensuring they are transported comfortably to and from the facility at a time that suits you.</p>
+            </div>
+        </div>
+        <div class="service-card" onclick="toggleDetails('pet-grooming')">
+            <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 20px; color: #e44c38;">✂️ Pet Grooming</h3>
+            <p>Professional grooming services for your pets.</p>
+            <div id="pet-grooming" class="service-details" style="display:none;">
+                <p>Our expert groomers provide full grooming services, including baths, haircuts, nail trims, and more, ensuring your pets look and feel their best.</p>
+            </div>
+        </div>
+        <div class="service-card" onclick="toggleDetails('dog-walking')">
+            <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 20px; color: #e44c38;">🦮 Dog Walking Service</h3>
+            <p>Enjoy a fun and energizing walk with your dog! 🐕</p>
+            <div id="dog-walking" class="service-details" style="display:none;">
+                <p>Our dog walking service ensures your dog gets the exercise and fresh air they need, with a fun walk tailored to their pace and energy level.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <a href="#booking" class="button">Book a Service</a>
+
+    <section id="booking">
+        <h3 style="text-align:center; ">Book Your Service Below</h3>
+        <form id="bookingForm">
+            <label for="client_name">Name:</label>
+            <input type="text" id="client_name" required>
+    
+            <label for="client_email">Email:</label>
+            <input type="email" id="client_email" required>
+    
+            <label for="client_phone">Phone:</label>
+            <input type="tel" id="client_phone" pattern="[0-9]{10}" required>
+    
+            <label for="services">Select Services:</label>
+            <select id="services" required>
+                <option value="Pet Boarding">Pet Boarding</option>
+                <option value="Pick-Up & Drop-Off">Pick-Up & Drop-Off</option>
+                <option value="Pet Grooming">Pet Grooming</option>
+                <option value="Dog Walking">Dog Walking</option>
+            </select>
+    
+            <button type="submit">Submit Booking</button>
+        </form>
+    
+        <!-- Success Message -->
+        <div id="successMessage" style="display:none; margin-top: 20px; text-align:center; color: green; font-size: 1.2em;">
+            ✅ Your booking was successful! A confirmation email has been sent.
+        </div>
+    </section>
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+    
+    
+    <script>
+        document.getElementById('bookingForm').onsubmit = function(e) {
+            e.preventDefault();
+    
+            // Get Form Values
+            const clientName = document.getElementById('client_name').value;
+            const clientEmail = document.getElementById('client_email').value;
+            const clientPhone = document.getElementById('client_phone').value;
+            const selectedService = document.getElementById('services').value;
+    
+            // Validate Email and Phone
+            if (!validateEmail(clientEmail)) {
+                alert('❌ Please enter a valid email address.');
+                return false;
+            }
+    
+            if (!validatePhone(clientPhone)) {
+                alert('❌ Please enter a valid 10-digit phone number.');
+                return false;
+            }
+    
+            // Prepare Email Data for Client
+            const clientParams = {
+                client_name: clientName,
+                client_email: clientEmail,
+                client_phone: clientPhone,
+                service: selectedService
+            };
+    
+            // Send Email to Client
+            emailjs.send("service_nho6cst", "template_a5uboki", clientParams)
+            .then(function(response) {
+                console.log("Email to client sent successfully!", response);
+                document.getElementById('successMessage').style.display = 'block';
+            }, function(error) {
+                console.log("Failed to send email to client...", error);
+            });
+    
+            // Prepare Notification for Owner
+            const ownerParams = {
+                client_name: clientName,
+                client_email: clientEmail,
+                client_phone: clientPhone,
+                service: selectedService,
+                owner_email: 'sherapetboarding@gmail.com'  // Your Email Here
+            };
+    
+            // Send Email to Owner
+            emailjs.send("service_nho6cst", "template_kd6eyo8", ownerParams)
+            .then(function(response) {
+                console.log("Notification to owner sent successfully!", response);
+            }, function(error) {
+                console.log("Failed to send notification to owner...", error);
+            });
+        };
+    
+        // Email Validation
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    
+        // Phone Validation
+        function validatePhone(phone) {
+            const phoneRegex = /^[0-9]{10}$/;
+            return phoneRegex.test(phone);
+        }
+    </script>
+    
+
+   
+
+    <footer>
+        <img src="LOGO 1.jpg" alt="Round Image" class="round-image">
+
+        <p style="font-family:Georgia, 'Times New Roman', Times, serif;">&copy; 2025 BirjeVTech | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
